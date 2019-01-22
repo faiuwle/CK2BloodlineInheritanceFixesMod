@@ -1,0 +1,91 @@
+decisions = {
+    bif_fix_bloodlines = {
+        is_high_prio = yes
+        
+        potential = {
+            always = yes
+        }
+        
+        allow = {
+            OR = {
+                AND = {
+                    is_female = yes
+                    any_owned_bloodline = {
+                        custom_tooltip = {
+                            text = bif_matrilineal_transfer_tooltip
+                            NOT = { has_bloodline_flag = no_matrilineal_transfer }
+                        }
+                        ROOT = {
+                            any_child_even_if_dead = {
+                                dynasty = ROOT
+                                NOT = { trait = bastard }
+                                custom_tooltip = {
+                                    text = bif_bloodline_member_tooltip
+                                    NOT = { is_bloodline_member_of = PREVPREV }
+                                }
+                            }
+                        }
+                    }
+                }
+                AND = {
+                    is_female = no
+                    any_owned_bloodline = {
+                        ROOT = {
+                            any_child_even_if_dead = {
+                                NOT = { trait = bastard }
+                                custom_tooltip = {
+                                    text = bif_bloodline_member_tooltip
+                                    NOT = { is_bloodline_member_of = PREVPREV }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        effect = {
+            if = {
+                limit = { is_female = yes }
+                any_owned_bloodline = {
+                    limit = {
+                        NOT = { has_bloodline_flag = no_matrilineal_transfer }
+                    }
+                    custom_tooltip = {
+                        text = bif_give_bloodline_tooltip
+                        ROOT = {
+                            any_child_even_if_dead = {
+                                limit = {
+                                    dynasty = ROOT
+                                    NOT = { trait = bastard }
+                                    NOT = { is_bloodline_member_of = PREVPREV }
+                                }
+                                add_to_bloodline = PREVPREV
+                            }
+                        }
+                    }
+                }
+            }
+            else = {
+                any_owned_bloodline = {
+                    custom_tooltip = {
+                        text = bif_give_bloodline_tooltip
+                        ROOT = {
+                            any_child_even_if_dead = {
+                                limit = {
+                                    NOT = { trait = bastard }
+                                    NOT = { is_bloodline_member_of = PREVPREV }
+                                }
+                                add_to_bloodline = PREVPREV
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
