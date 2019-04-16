@@ -1,0 +1,9 @@
+character_event = {
+    id = BIF.1
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        set_global_flag = bloodline_inheritance_fixes
+    }
+}
