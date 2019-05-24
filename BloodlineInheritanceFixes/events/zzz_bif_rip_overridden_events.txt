@@ -7,6 +7,19 @@ narrative_event = {
 	picture = GFX_evt_garden
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21122
@@ -55,6 +68,19 @@ narrative_event = {
 	picture = GFX_evt_garden
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21124
@@ -103,6 +129,19 @@ narrative_event = {
 	picture = GFX_evt_shadowy_cabal
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21222
@@ -151,6 +190,19 @@ narrative_event = {
 	picture = GFX_evt_shadowy_cabal
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21224
@@ -198,6 +250,19 @@ narrative_event = {
 	picture = GFX_evt_shadowy_cabal
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21322
@@ -245,6 +310,19 @@ narrative_event = {
 
 	is_triggered_only = yes
 
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
+    
 	option = {
 		name = EVTOPTA_RIP_21324
 		custom_tooltip = { text = EVTOPTA_RIP_21324_TOOLTIP } 
@@ -292,6 +370,19 @@ narrative_event = {
 	picture = GFX_evt_death
 
 	is_triggered_only = yes
+    
+	trigger = {
+		FROM = { is_alive = yes }
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				FROM = { is_alive = no }
+			}
+			character_event = { id = RIP.21099 }
+		}
+	}
 
 	option = {
 		name = EVTOPTA_RIP_21422

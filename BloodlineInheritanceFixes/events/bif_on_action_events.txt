@@ -1,3 +1,5 @@
+namespace = BIF
+
 character_event = {
     id = BIF.1
     hide_window = yes
